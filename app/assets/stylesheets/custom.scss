@@ -7,7 +7,7 @@
   margin-bottom: 0;
   background-color: #fff;
 }
-@media (min-width: 768%) {
+@media (min-width: 70%) {
   .jumbotron {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -112,4 +112,29 @@ margin: 0 0 30px 0;
 .form-control {
 color: $state-danger-text;
 }
+}
+
+/* header */
+#logo {
+float: left;
+margin-right: 10px;
+font-size: 1.7em;
+color: #fff;
+text-transform: uppercase;
+letter-spacing: -1px;
+padding-top: 9px;
+font-weight: bold;
+}
+#logo:hover {
+color: #fff;
+text-decoration: none;
+}
+li{
+  list-style: none;
+}
+
+.font-navbar{
+    font-size: 18px;
+    padding-top: 10px;
+
 }
