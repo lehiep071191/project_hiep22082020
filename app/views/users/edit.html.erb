@@ -1,0 +1,43 @@
+<% provide(:title, "Edit user") %>
+<center><h1>Cập nhật thông tin tài khoản</h1></center>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<%= form_for(@user) do |f| %>
+				<%= render 'shared/error_messages' %>
+				<%= f.label :name, "Tên " %>
+				<%= f.text_field :name, class: 'form-control' %>
+				<%= f.label :email %>
+				<%= f.email_field :email, class: 'form-control' %>
+				<%= f.label :password, "Mật khẩu" %>
+				<%= f.password_field :password, class: 'form-control' %>
+				<%= f.label :password_confirmation, "Nhắc lại mật khẩu" %>
+				<%= f.password_field :password_confirmation, class: 'form-control' %>
+				<%= f.label :diachi, 'Quê quán' %>
+				<%= f.text_field :diachi, class: 'form-controltrol'%>
+				<%= f.label :ngaysinh, 'Ngày sinh' %>
+				<%= f.date_field :diachi, class: 'form-controltrol'%>
+			<table>
+			<tr>	
+			<td width = "50px"><%= f.radio_button :gioitinh,1, class: 'form-controltrol'%></td>
+			<td>Nam</td>
+			</tr>
+			<tr>
+			
+			<td><%= f.radio_button :gioitinh,2, class: 'form-controltrol'%></td>
+			<td>Nữ</td>	
+			</tr>
+			<tr>
+				
+			<td><%= f.radio_button :gioitinh,3, class: 'form-controltrol'%></td>
+			<td>N/a</td>
+			</tr>
+			
+			</table>
+				<%= f.submit "Save changes", class: "btn btn-primary" %>
+			<% end %>
+		<div class="gravatar_edit">
+			<%= gravatar_for @user %>
+			<a href="https://gravatar.com/emails" target="_blank">change</a>
+		</div>
+	</div>
+</div>
